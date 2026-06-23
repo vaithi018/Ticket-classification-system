@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+*.db
+tickets.db
+test_tickets.db
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Environments
+.env
+.env.*
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
