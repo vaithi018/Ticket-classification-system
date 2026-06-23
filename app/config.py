@@ -26,7 +26,11 @@ SENTIMENTS = [
 ]
 
 # Database settings
-DB_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tickets.db")
+# On Vercel, only /tmp is writable. Locally, use the project root.
+if os.environ.get("VERCEL"):
+    DB_PATH = "/tmp/tickets.db"
+else:
+    DB_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tickets.db")
 
 # Default model
 DEFAULT_MODEL = "gpt-4o-mini"
